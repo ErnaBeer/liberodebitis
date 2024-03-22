@@ -1,0 +1,42 @@
+:root {
+  --footer-height: 0px;
+}
+html {
+  @apply overflow-x-hidden !overflow-y-scroll !box-border;
+  min-width: 347px;
+  min-height: 600px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.24) rgba(0, 0, 0, 0.01);
+  overscroll-behavior: contain;
+  padding-right: 0;
+  margin-right: -0;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &::-webkit-scrollbar {
+    transition: background-color 0.3s;
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    border-radius: var(--radius);
+  }
+  /* Handle */
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-thumb:window-inactive {
+    transition: background-color 0.3s;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: var(--radius);
+  }
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-thumb:window-inactive {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-thumb:window-inactive {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+}

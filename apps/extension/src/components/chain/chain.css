@@ -1,0 +1,34 @@
+:host {
+}
+
+.chain-tab {
+  @apply flex w-14 h-14 justify-center items-center p-2 cursor-pointer;
+  transform-origin: bottom;
+  &:hover {
+    & > .chain-icon {
+      filter: contrast(120%);
+    }
+  }
+  &.active {
+    @apply bg-white;
+  }
+}
+.chain-icon {
+  @apply w-8 h-8 rounded-full bg-contain bg-center bg-no-repeat bg-white cursor-pointer;
+  &.eth {
+    background-image: url('~/assets/ethereum.svg');
+  }
+  &.sol {
+    background-color: #000;
+    background-image: url('~/assets/solana.svg');
+  }
+  &.apt {
+    background-image: url('~/assets/aptos.svg');
+  }
+  &.bnb {
+    background-image: url('~/assets/bsc.svg');
+  }
+  &.btc {
+    background-image: url('~/assets/bitcoin.svg');
+  }
+}

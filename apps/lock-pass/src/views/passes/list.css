@@ -1,0 +1,4 @@
+.passes {
+  min-height: 300px;
+  @apply h-full bg-white;
+}
